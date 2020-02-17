@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- basic javascript understanding is needed to understand and use this API -->
+
+    <head>
+        
+        <script>
+            
+            function allowDrop (ev) { ev.preventDefault() ; }
+
+            function drag (ev) { ev.dataTransfer.setData("text", ev.target.id ) ; }
+
+            function drop (ev) { ev.preventDefault () ;
+            
+            var data = ev.dataTransfer.getData ( "text" ) ;
+
+            ev.target.appendChild (document.getElementById(data));
+            } 
+
+        </script>
+		
+			<title>
+	
+			Title
+	
+			</title>
+
+    </head>
+	
+
+    <body>
+
+        <div id = "box"
+
+        ondrop = "drop(event)"
+
+        ondragover = "allowDrop(event)"
+
+        style = " border : 1px solid black ; width : 344 px ; height : 150px " >
+    
+        </div>
+
+        <img id = "image"
+
+        src= "https://i.pinimg.com/736x/be/43/98/be439819ba3cf76822eb31a30821adce.jpg"
+
+        draggable = "true"
+
+        ondragstart = " drag (event) "
+
+        width = " 100px " height = " 50px " alt = "" />
+
+	</body>
+
+</html>
